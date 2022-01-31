@@ -1,7 +1,16 @@
 #img-bg{
-    background-image: url(https://i.pinimg.com/564x/9a/c5/7f/9ac57fe1270b207907bc32503a6c3987.jpg);
+    background-image: url(https://i.imgur.com/Uan00Gd.jpg);
     min-height: 695px;
+    height: auto;
+    max-width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.asterisco{
+    color: red;
+}
+.font{
+    font-family: 'Poppins', sans-serif;
+    }
