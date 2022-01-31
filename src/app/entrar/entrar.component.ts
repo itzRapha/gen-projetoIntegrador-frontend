@@ -5,50 +5,45 @@ import { UsuarioLogin } from '../model/UsuarioLogin';
 import { AuthService } from '../service/auth.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-entrar',
+  templateUrl: './entrar.component.html',
+  styleUrls: ['./entrar.component.css']
 })
-export class LoginComponent implements OnInit {
+export class EntrarComponent implements OnInit {
 
-  
   usuarioLogin: UsuarioLogin = new UsuarioLogin
-  
+
   constructor(
     private authService: AuthService,
     private router: Router
   ) { }
 
- 
- 
- 
- 
- 
   ngOnInit() {
-  
     window.scroll(0, 0)
-
   }
 
   entrar() {
     this.authService.entrar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
-
       this.usuarioLogin = resp
-  
+
+      // environment são variáveis globais
       environment.token = this.usuarioLogin.token
       environment.nome = this.usuarioLogin.nome
       environment.foto = this.usuarioLogin.foto
       environment.id = this.usuarioLogin.id
-      
+
+      this.usuarioLogin.foto
+
       this.router.navigate(['/inicio'])
-      },erro => {
+    }, erro => {
+      if (erro.status == 500 || erro.status == 401) {
+        alert('Usuário ou senha estão incorretos!')
+      } else {
 
-      if (erro.status == 500) {
-        alert('Usuario ou Senha estão incorretos')
       }
-
     })
-
   }
+
+
 
 }

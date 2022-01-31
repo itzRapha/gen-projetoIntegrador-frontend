@@ -46,7 +46,7 @@ export class CadastrarComponent implements OnInit {
       // subscribe() transforma o objeto em JSON
       // arrow function pega a resposta e atribui ao usuario
 
-      this.router.navigate(['/login'])
+      this.router.navigate(['/entrar'])
       alert('Usuário cadastrado com sucesso!')
     }
   }
