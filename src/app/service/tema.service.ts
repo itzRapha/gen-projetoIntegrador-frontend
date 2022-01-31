@@ -20,9 +20,12 @@ export class TemaService {
     return this.http.get<Tema[]>('https://gen-ti.herokuapp.com/tema', this.token)
   }
 
-
   getByIdTema(id: number): Observable<Tema>{
     return this.http.get<Tema>(`https://gen-ti.herokuapp.com/tema/${id}`, this.token)
+  }
+
+  getByNomeTema(nome: string): Observable<Tema[]>{
+    return this.http.get<Tema[]>('https://gen-ti.herokuapp.com/tema/${nome}', this.token)
   }
 
   
