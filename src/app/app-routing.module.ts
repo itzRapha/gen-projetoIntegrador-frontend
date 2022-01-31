@@ -6,12 +6,13 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
 
-  {path:'', redirectTo:'login', pathMatch:'full'},
+  {path:'', redirectTo:'entrar', pathMatch:'full'},
 
-  {path:'login', component:LoginComponent},
+  // direciona a rota para os componentes em questão
+  {path:'entrar', component:LoginComponent},
   {path:'cadastrar', component:CadastrarComponent},
-  {path:'incio', component:InicioComponent}
-
+  
+  {path:'inicio', component:InicioComponent},
 ];
 
 @NgModule({

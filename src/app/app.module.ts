@@ -21,7 +21,7 @@ import { InicioComponent } from './inicio/inicio.component';
     RodapeComponent,
     LoginComponent,
     CadastrarComponent,
-    InicioComponent    
+    InicioComponent
   ],
   imports: [
     BrowserModule,
