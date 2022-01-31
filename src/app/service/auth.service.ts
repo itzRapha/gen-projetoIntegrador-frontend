@@ -14,11 +14,11 @@ export class AuthService {
   ) { }
 
   entrar(UsuarioLogin:UsuarioLogin): Observable<UsuarioLogin>{
-    return this.http.post<UsuarioLogin>('http://localhost:8080/usuario/logar', UsuarioLogin) //pode dar erro aqui
+    return this.http.post<UsuarioLogin>('https://gen-ti.herokuapp.com/usuarios/logar', UsuarioLogin)
 
   }
   cadastrar(usuario:Usuario): Observable<Usuario>{
-    return this.http.post<Usuario>('http://localhost:8080/usuario/save', Usuario) //pode dar erro aqui
+    return this.http.post<Usuario>('https://gen-ti.herokuapp.com/usuarios/cadastrar', Usuario)
 
   }
 
