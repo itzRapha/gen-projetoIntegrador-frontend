@@ -94,6 +94,10 @@
                       <p class="card-text">{{item.texto}}</p>
                       <div class="card-footer">
                         <small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm' }}</small>
+
+                        <a [routerLink]="['/postagem-edit',item.id]" class="text-info mr-3" href="">Editar</a>
+                        <a [routerLink]="['/postagem-delete', item.id]" class= "text-danger" href="">Apagar</a>
+                        
                     </div>
                     </div>
                   </div>
@@ -120,6 +124,8 @@
                       <div class="card">
                         <div class="card-body">
                           <h4 class="card-title">{{item.titulo}}</h4>
+
+
                           <p class="card-text">{{item.texto}}</p>
                           <div class="card-footer">
                             <small class="text-muted">{{item.usuario.nome}}
