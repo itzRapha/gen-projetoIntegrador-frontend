@@ -15,7 +15,11 @@ export class PostagemService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
   getAllPostagens(): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>('htthttps://gen-ti.herokuapp.com/postagem', this.token)
+    return this.http.get<Postagem[]>('https://gen-ti.herokuapp.com/postagem${id}', this.token)
+  }
+
+  getByIdPostagem(id: number): Observable<Postagem>{
+    return this.http.get<Postagem>(`https://gen-ti.herokuapp.com/postagem`,this.token)
   }
 
   postPostagem(postagem: Postagem): Observable<Postagem>{
