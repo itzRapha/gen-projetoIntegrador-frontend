@@ -26,7 +26,10 @@ export class PostagemEditComponent implements OnInit {
     private temaService: TemaService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+
+    window.scroll(0,0)
+    
     if(environment.token == ''){
       this.router.navigate(['/entrar'])
 
@@ -56,6 +59,14 @@ export class PostagemEditComponent implements OnInit {
   }
     
   atualizar(){
+    this.tema.id = this.idTemas
+    this.postagem.tema = this.tema
+
+    this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp
+      alert('Postagem atualizada com sucesso!')
+      this.router.navigate(['/inicio'])
+    })
     
   }
 
