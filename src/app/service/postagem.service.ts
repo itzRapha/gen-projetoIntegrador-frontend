@@ -15,12 +15,6 @@ export class PostagemService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
-  getAllPostagens(): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>('htthttps://gen-ti.herokuapp.com/postagem', this.token)
-  }
-
-  postPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.post<Postagem>('https://gen-ti.herokuapp.com/postagem/save', postagem, this.token)
-  }
+  
 
 }
