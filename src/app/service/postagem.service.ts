@@ -22,6 +22,10 @@ export class PostagemService {
     return this.http.post<Postagem>('https://gen-ti.herokuapp.com/postagem/save', postagem, this.token)
   }
 
+  putPostagem(postagem: Postagem):Observable<Postagem>{
+    return this.http.put<Postagem>('https://gen-ti.herokuapp.com/postagem/',postagem, this.token)
+  }
+
   
 
 }
