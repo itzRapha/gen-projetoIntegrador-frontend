@@ -29,11 +29,11 @@ export class TemaService {
   }
 
   postTema(tema: Tema): Observable<Tema>{
-    return this.http.post<Tema>('https://gen-ti.herokuapp.com/tema/', tema, this.token)
+    return this.http.post<Tema>('https://gen-ti.herokuapp.com/tema', tema, this.token)
   }
 
   putTema(tema: Tema): Observable<Tema>{
-    return this.http.put<Tema>('https://gen-ti.herokuapp.com/tema/', tema, this.token)
+    return this.http.put<Tema>('https://gen-ti.herokuapp.com/tema', tema, this.token)
   }
   
   deleteTema(id: number){
