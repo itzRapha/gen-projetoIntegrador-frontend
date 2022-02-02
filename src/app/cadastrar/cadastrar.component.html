@@ -1,65 +1,103 @@
+<nav class="navbar navbar-expand-lg navbar-light navbackground">
+
+    <img src="https://i.imgur.com/aN4zLaO.png" height="50px" width="50px" alt="">
+    <a  class="navbar-brand" href="#" ></a>
+  
+    <div class="collapse navbar-collapse justify-content-end mr-1" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link text-white font3" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white font3" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white font3" href="#">Cadastro</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
 <div class="container-fluid">
     <div class="row d-flex align-items-center ">
 
-        <div class="col-md-12" id="img-bg"></div>
+        <div class="col-md-12" id="img-bg">
 
-        <div class="col-md-12 my-5">
+        <div class=" col-md-4 backgroundform d-flex justify-content-center align-items-center mt-5 mp-5 ml-1 ">
 
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-10">
+            <div class="col-md-12 my-5">
 
-                    <h1 class="text-center font">Cadastrar</h1>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-10">
 
-                    <div class="form-group py-2 font">
-                        <label for="nome">Nome</label>
-                        <span class="asterisco"> *</span>
-                        <!-- ngModel pega tudo que tá dentro do input -->
-                        <input  [(ngModel)]='usuario.nome' class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu nome completo"> 
+                        <h1 class="text-center font">Cadastrar</h1>
+
+                        <div class="form-group py-2 font">
+                            <label for="nome">Nome</label>
+                            <span class="asterisco"> *</span>
+                            <!-- ngModel pega tudo que tá dentro do input -->
+                            <input  [(ngModel)]='usuario.nome' class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu nome completo"> 
+                        </div>
+
+                        <div class="form-group py-2 font">
+                            <label for="usuario">Usuário</label>
+                            <span class="asterisco"> *</span>
+                            <input [(ngModel)]='usuario.usuario' class="form-control" type="text" name="usuario" id="usuario" placeholder="Crie seu usuário">
+                        </div>
+
+                        <div class="form-group py-2 font">
+                            <label for="usuario">Link da foto</label>
+                            <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="link-foto"             id="link-foto" placeholder="Insira uma URL">
+                        </div>
+
+                        <div class="form-group py-2 font">
+                            <label for="senha">Senha</label>
+                            <span class="asterisco"> *</span>
+                            <!-- (input) é um evento (como onClick)  e é chamado com ($event)-->
+                            <input (input)='confirmarSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Crie sua senha">
                     </div>
 
-                    <div class="form-group py-2 font">
-                        <label for="usuario">Usuário</label>
-                        <span class="asterisco"> *</span>
-                        <input [(ngModel)]='usuario.usuario' class="form-control" type="text" name="usuario" id="usuario" placeholder="Crie seu usuário">
-                    </div>
+                        <div class="form-group py-2 font">
+                            <label for="confirme-senha">Confirme sua senha</label>
+                            <span class="asterisco"> *</span>
+                            <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirme-senha" id="confirme-senha" placeholder="Confirme sua senha">
+                        </div>
 
-                    <div class="form-group py-2 font">
-                        <label for="usuario">Link da foto</label>
-                        <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="link-foto" id="link-foto" placeholder="Insira uma URL">
-                    </div>
-
-                    <div class="form-group py-2 font">
-                        <label for="senha">Senha</label>
-                        <span class="asterisco"> *</span>
-                        <!-- (input) é um evento (como onClick)  e é chamado com ($event)-->
-                        <input (input)='confirmarSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Crie sua senha">
-                    </div>
-
-                    <div class="form-group py-2 font">
-                        <label for="confirme-senha">Confirme sua senha</label>
-                        <span class="asterisco"> *</span>
-                        <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirme-senha" id="confirme-senha" placeholder="Confirme sua senha">
-                    </div>
-
-                    <div class="form-group py-2 font">
-                        <label for="tipo-usuario">Tipo de usuário</label>
-                        <span class="asterisco"> *</span>
-                        <select (change)='tipoUsuario($event)' class="form-control" name="tipo-usuario" id="tipo-usuario">
+                        <div class="form-group py-2 font">
+                            <label for="tipo-usuario">Tipo de usuário</label>
+                            <span class="asterisco"> *</span>
+                            <select (change)='tipoUsuario($event)' class="form-control" name="tipo-usuario" id="tipo-usuario">
                             <option>Selecione um tipo de usuário:</option>
                             <option value="normal">Normal</option>
                             <option value="admin">Administrador</option>
-                        </select>
-                    </div>
+                            </select>
+                        </div>
 
-                    <div class="d-flex justify-content-center pt-4 font">
-                        <button type="submit" class="btn btn-danger w-25 me-2" routerLink='/entrar'>Cancelar</button>
-                        <button (click)='cadastrar()' type="submit" class="btn btn-success w-25 ms-2">Cadastrar</button>
-                    </div>
+                        <div class="d-flex justify-content-center pt-4 font">
+                            <button type="submit" class="btn btn w-25 me-2 botao-cancelar" routerLink='/entrar'>Cancelar</button>
+                            <button (click)='cadastrar()' type="submit" class="btn w-25 ms-2 botao-cadastrar">Cadastrar</button>
+                        </div>
 
+                    </div>
                 </div>
+
             </div>
 
         </div>
 
     </div>
+</div>
 </div>
