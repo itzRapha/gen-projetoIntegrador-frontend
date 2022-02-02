@@ -28,7 +28,7 @@ tipoUsuario: string
     window.scroll(0, 0)
 
     if (environment.token == '') {
-      this.router.navigate(['/entrar'])
+      this.router.navigate(['/'])
     }
 
     this.idUser = this.route.snapshot.params['id']

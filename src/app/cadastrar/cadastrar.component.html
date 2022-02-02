@@ -1,4 +1,24 @@
-<nav class="navbar navbar-expand-lg navbar-light navbackground">
+<nav class="navbar navbar-expand-lg navbar-light navbackground ">
+    <html>
+	<head>
+		<style type="text/css">
+			/* Aqui definimos a nossa animação com o nome "rotate" */
+			@keyframes rotate {
+				from {
+					transform: rotate(0deg);
+				}
+
+				to {
+					transform: rotate(359deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="loading"></div>
+	</body>
+</html>
+
 
     <img src="https://i.imgur.com/aN4zLaO.png" height="50px" width="50px" alt="">
     <a  class="navbar-brand" href="#" ></a>
@@ -36,7 +56,7 @@
 
         <div class="col-md-12" id="img-bg">
 
-        <div class=" col-md-4 backgroundform d-flex justify-content-center align-items-center mt-5 mp-5 ml-1 ">
+        <div class=" col-md-4 backgroundform d-flex align-items-center mt-5 mp-5 ml-1 caixa-cadastrar">
 
             <div class="col-md-12 my-5">
 
@@ -87,8 +107,8 @@
                         </div>
 
                         <div class="d-flex justify-content-center pt-4 font">
-                            <button type="submit" class="btn btn w-25 me-2 botao-cancelar" routerLink='/entrar'>Cancelar</button>
-                            <button (click)='cadastrar()' type="submit" class="btn w-25 ms-2 botao-cadastrar">Cadastrar</button>
+                            <button type="submit" class="btn btn w-27 me-2 botao-cancelar" routerLink='/entrar'>Cancelar</button>
+                            <button (click)='cadastrar()' type="submit" class="btn w-27 ms-2 botao-cadastrar">Cadastrar</button>
                         </div>
 
                     </div>
@@ -100,4 +120,5 @@
 
     </div>
 </div>
+
 </div>

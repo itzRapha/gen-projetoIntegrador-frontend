@@ -19,7 +19,9 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { DeleteTemaComponent } from './delete/delete-tema/delete-tema.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,7 @@ import { DeleteTemaComponent } from './delete/delete-tema/delete-tema.component'
     PostagemEditComponent,
     PostagemDeleteComponent,
     UserEditComponent,
-    DeleteTemaComponent
+    TemaDeleteComponent
   ],
   imports: [
     BrowserModule,
