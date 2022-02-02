@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -13,11 +11,15 @@ import { InicioComponent } from './inicio/inicio.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { TemaComponent } from './tema/tema.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
-import { TemaDeleteComponent } from './edit/tema-delete/tema-delete.component';
+
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
-import { PostagemComponent } from './delete/postagem/postagem.component';
+
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
+
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { DeleteTemaComponent } from './delete/delete-tema/delete-tema.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +31,10 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
     InicioComponent,
     TemaComponent,
     TemaEditComponent,
-    TemaDeleteComponent,
     PostagemEditComponent,
-    PostagemComponent,
     PostagemDeleteComponent,
-    UserEditComponent
+    UserEditComponent,
+    DeleteTemaComponent
   ],
   imports: [
     BrowserModule,

@@ -5,12 +5,15 @@ import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
-  selector: 'app-tema-delete',
-  templateUrl: './tema-delete.component.html',
-  styleUrls: ['./tema-delete.component.css']
+  selector: 'app-delete-tema',
+  templateUrl: './delete-tema.component.html',
+  styleUrls: ['./delete-tema.component.css']
 })
-export class TemaDeleteComponent implements OnInit {
+export class DeleteTemaComponent implements OnInit {
 
+
+
+  
   tema: Tema = new Tema
   idTema: number
 
