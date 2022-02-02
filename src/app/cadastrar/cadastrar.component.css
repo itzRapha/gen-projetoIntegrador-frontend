@@ -14,3 +14,19 @@
 .font{
     font-family: 'Poppins', sans-serif;
     }
+.botao-cadastrar{
+    background-color: #ffd700;    
+    }
+.botao-cancelar{
+    background-color: #0c0c0d;
+    color: white;
+}
+.col-md-4{
+    background-color: white;
+    border-radius: 35px;
+    width: 400px;
+    height: 600px;
+}
+.navbackground {
+    background-color: #000000;
+}
