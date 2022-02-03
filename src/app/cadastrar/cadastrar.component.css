@@ -35,13 +35,21 @@
     margin-left: auto;
     margin-right: auto;
 }
-
 .loading {
-    background: #094CFA;
     width: 60px;
     height: 60px;
-    margin: auto;
-    border-radius: 4px;
-    /* Aqui declaramos nossa animação inline */
-    animation: rotate 3s linear infinite;
 }
+.galeria{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .foto{
+    position: absolute;
+    animation-name: animacao;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    border-radius: 5px;
+
+  }
