@@ -13,7 +13,7 @@ export class AuthService {
   constructor(
     private http: HttpClient
   ) { }
-
+/*
   entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin>{ //observable GARANTE o tipo que será passado
     return this.http.post<UsuarioLogin>("https://gen-ti.herokuapp.com/usuarios/logar", usuarioLogin) // salva no caminho em questão o parâmetro passado (usuarioLogin)
   }
@@ -29,7 +29,7 @@ export class AuthService {
   getByIdUsuario(id: number): Observable<Usuario>{
     return this.http.get<Usuario>(`https://gen-ti.herokuapp.com/usuarios/${id}`)
   }
-
+*/
   logado(){
     let ok: boolean = false
 
